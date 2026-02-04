@@ -196,3 +196,28 @@ The hybrid architecture aligns closely with intelligent infrastructure initiativ
 
 ## Project Structure
 
+```
+Traffic Flow Optimization/
+├── data/                           # Traffic data and road 
+networks
+│   ├── MRDB_2024_published.shp    # Road network shapefile
+│   ├── dft_traffic_counts_*.csv    # Traffic count datasets
+│   └── ...
+├── scripts/
+│   ├── traffic_env.py             # RL environment for traffic 
+simulation
+│   ├── train_rl_agent.py          # DQN training script
+│   ├── emergency_routing.py       # MILP emergency routing
+│   ├── build_graph.py             # Road network graph builder
+│   ├── integrated_system.py       # Combined RL + MILP system
+│   ├── realistic_env.py           # Environment with real 
+traffic data
+│   ├── visualize.py               # Visualization utilities
+│   ├── plot_training.py            # Plot training curves
+│   └── ...
+├── main.py                         # Main entry point
+├── config.py                       # Configuration settings
+├── requirements.txt                # Python dependencies
+└── README.md                       # This file
+```
+
