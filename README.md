@@ -197,27 +197,31 @@ The hybrid architecture aligns closely with intelligent infrastructure initiativ
 ## Project Structure
 
 ```
-Traffic Flow Optimization/
-├── data/                           # Traffic data and road 
-networks
-│   ├── MRDB_2024_published.shp    # Road network shapefile
-│   ├── dft_traffic_counts_*.csv    # Traffic count datasets
-│   └── ...
-├── scripts/
-│   ├── traffic_env.py             # RL environment for traffic 
-simulation
-│   ├── train_rl_agent.py          # DQN training script
-│   ├── emergency_routing.py       # MILP emergency routing
-│   ├── build_graph.py             # Road network graph builder
-│   ├── integrated_system.py       # Combined RL + MILP system
-│   ├── realistic_env.py           # Environment with real 
-traffic data
-│   ├── visualize.py               # Visualization utilities
-│   ├── plot_training.py            # Plot training curves
-│   └── ...
-├── main.py                         # Main entry point
-├── config.py                       # Configuration settings
-├── requirements.txt                # Python dependencies
-└── README.md                       # This file
+Traffic-Flow-Optimization-System/
+│
+├── scripts/                           # Core implementation scripts
+│   ├── __init__.py                    # Package initialization
+│   ├── traffic_env.py                 # RL environment for traffic simulation
+│   ├── train_rl_agent.py              # DQN training implementation
+│   ├── emergency_routing.py           # MILP emergency routing solver
+│   ├── build_graph.py                 # Road network graph builder
+│   ├── integrated_system.py           # Combined RL + MILP system
+│   ├── load.py                        # Data loading utilities
+│   ├── plot_training.py               # Training visualization
+│   └── visualize_results.py           # Comprehensive visualization tools
+│
+├── data/                              # Data directory (not in repo, created locally)
+│   ├── MRDB_2024_published.shp       # Road network shapefile
+│   ├── MRDB_2024_published.shx       # Shapefile index
+│   ├── MRDB_2024_published.dbf       # Shapefile database
+│   ├── MRDB_2024_published.prj       # Shapefile projection
+│   ├── dft_traffic_counts_*.csv      # Traffic count datasets
+│   └── [other data files]            # Additional data files as needed
+│
+├── main.py                            # Main entry point (unified interface)
+├── run_full_system.py                 # Full system demonstration with visualizations
+├── config.py                          # Configuration settings
+├── requirements.txt                   # Python dependencies
+├── README.md                          # Project documentation
+└── .gitignore                         # Git ignore rules
 ```
-
